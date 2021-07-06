@@ -129,6 +129,59 @@ func main() {
 	var mysteryNumberFloat64 float64 = mysteryNumber
 	var mysteryNumberComplex64 complex64 = mysteryNumber
 
-	fmt.Printf("mysteryNumber - %T, mysteryNumberInt32 %T, mysteryNumberInt64 %T, mysteryNumberFloat64 %T, mysteryNumberComplex64 %T", mysteryNumber, mysteryNumberInt32, mysteryNumberInt64, mysteryNumberFloat64, mysteryNumberComplex64)
+	fmt.Printf("mysteryNumber - %T, mysteryNumberInt32 %T, mysteryNumberInt64 %T, mysteryNumberFloat64 %T, mysteryNumberComplex64 %T \n", mysteryNumber, mysteryNumberInt32, mysteryNumberInt64, mysteryNumberFloat64, mysteryNumberComplex64)
 
+	fmt.Println()
+
+	// functions
+
+	// 1.
+	x, y := 290, 7823
+	sum := addTwoNumbers(x, y)
+	fmt.Println("Sum of x and y is ", sum)
+
+	// 2.
+	difference := subtractTwoNumbers(3422, 233)
+	fmt.Println("Difference between two number is ", difference)
+
+	// 3.
+	length, width := 2441.43, 89.2
+	area, perimeter := findAreaAndPerimeter(length, width)
+	fmt.Println("Area: ", area, ", perimeter: ", perimeter)
+
+	// 4
+	radius := 32.2
+	areaCircle, perimeterCircle := findAreaPerimeterCircle(radius)
+	fmt.Println("Area and perimeter of the circle is ", areaCircle, perimeterCircle)
+
+    // 4.1 blank identifier
+    radius2 := 84.42
+    _, perimeterCircle2 := findAreaPerimeterCircle(radius2)
+    fmt.Println(perimeterCircle2)
+
+
+}
+
+// 1. A basic function
+func addTwoNumbers(num1 int, num2 int ) int {
+	return num1 + num2
+}
+
+// 2. When parameters are of same type
+func subtractTwoNumbers(num1, num2 int) int {
+	return num1 - num2
+}
+
+// 3. Multiple returns :)
+func findAreaAndPerimeter(length, width float64) (float64, float64) {
+	var perimeter = (length + width) * 2
+	var area = length * width
+	return  area, perimeter
+}
+
+// 4. Named return values
+func findAreaPerimeterCircle(radius float64) (areaCircle float64, perimeterCircle float64) {
+	areaCircle = math.Pi  * radius * radius
+	perimeterCircle = 2 * math.Pi * radius
+	return
 }
