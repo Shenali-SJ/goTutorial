@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"goTutorial/simpleInterest"
 	"math"
 	"unsafe"
 )
@@ -159,6 +160,13 @@ func main() {
     _, perimeterCircle2 := findAreaPerimeterCircle(radius2)
     fmt.Println(perimeterCircle2)
 
+    fmt.Println()
+
+    // custom packages
+    fmt.Println("Simple Interest Calculator")
+    p, r, t := 5000.0, 10.0, 1.0
+    si := simpleInterest.Calculate(p, r, t)
+    fmt.Println("Simple Interest is, ", si)
 
 }
 
