@@ -2,16 +2,20 @@ package main
 
 import (
 	"fmt"
+	_ "goTutorial/compoundInterest"
+	"goTutorial/conditional"
 	"goTutorial/simpleInterest"
+	"goTutorial/simpleInterest/finance"
 	"log"
 	"math"
 	"unsafe"
 )
 
 // package level variables
- var p, r, t = -5000.0, 10.0, 1.0
+ var p, r, t = 5000.0, 10.0, 1.0
 
-
+// error silencers
+var _ = finance.ShowFinanceDetails()
 
 func init() {
 	println("### Main package: initialized ###")
@@ -186,6 +190,21 @@ func main() {
     fmt.Println("Simple Interest Calculator")
     si := simpleInterest.Calculate(p, r, t)
     fmt.Println("Simple Interest is, ", si)
+
+    fmt.Println()
+
+    //conditionals
+
+    //normal if
+    result := conditional.CheckNumber(-31)
+    fmt.Println(result)
+
+    //if with shorthand assignment
+    result2 := conditional.CheckLessOrGreater(342.4)
+    fmt.Println(result2)
+
+    //ideal way
+    conditional.CheckSign(342)
 
 }
 
