@@ -222,6 +222,12 @@ func main() {
     loop.PrintSequence()
     fmt.Println()
 
+    // switch
+    conditional.CheckDay()
+    conditional.CheckVowels("q")
+    conditional.CheckValue()
+    conditional.CheckEven()
+
 }
 
 // 1. A basic function
