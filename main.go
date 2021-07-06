@@ -4,6 +4,7 @@ import (
 	"fmt"
 	_ "goTutorial/compoundInterest"
 	"goTutorial/conditional"
+	"goTutorial/loop"
 	"goTutorial/simpleInterest"
 	"goTutorial/simpleInterest/finance"
 	"log"
@@ -205,6 +206,21 @@ func main() {
 
     //ideal way
     conditional.CheckSign(342)
+
+    fmt.Println()
+
+    //loops
+    loop.PrintNumbers()
+    fmt.Println()
+
+    loop.ShowNumbers()
+    fmt.Println()
+
+    loop.PrintEvenNumbers()
+    fmt.Println()
+
+    loop.PrintSequence()
+    fmt.Println()
 
 }
 
